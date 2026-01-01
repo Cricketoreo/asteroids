@@ -14,9 +14,8 @@ def main():
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     while True:
         log_state()
-        clock.tick(60)
-        dt += clock.get_time() / 1000.0
-       
+        dt = clock.tick(60) / 1000.0
+        player.update(dt)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()

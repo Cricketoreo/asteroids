@@ -4,14 +4,16 @@ from constants import LINE_WIDTH, SHOT_RADIUS
 
 
 
+
 class Shot(CircleShape):
     def __init__(self, x, y):
         super().__init__(x, y, SHOT_RADIUS)
+
         
 
     def update(self, dt):
         self.position += self.velocity * dt
-        # Remove the shot if it goes off-screen
+        
         
 
     def draw(self, screen):
